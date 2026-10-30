@@ -1,9 +1,3 @@
-"""
-name: THE-us
-file: eleicao.py
-description: Eleicao de lider pelo algoritmo Bully, independente da camada de comunicacao
-"""
-
 #[imports]
 import threading
 from concurrent.futures import ThreadPoolExecutor
