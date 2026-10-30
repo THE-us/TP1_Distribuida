@@ -1,9 +1,3 @@
-"""
-name: THE-us
-file: relogio.py
-description: Relogio logico de Lamport, seguro para uso concorrente entre threads
-"""
-
 #[imports]
 import threading
 
