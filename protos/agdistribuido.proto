@@ -1,0 +1,87 @@
+// name: THE-us
+// file: agdistribuido.proto
+// description: Contrato gRPC entre os nos do algoritmo genetico distribuido
+
+syntax = "proto3";
+
+package agdistribuido;
+
+service No {
+  rpc Heartbeat (Ping) returns (Pong);
+  rpc EnviarMigrantes (PacoteMigrantes) returns (Recibo);
+  rpc Eleicao (PedidoEleicao) returns (RespostaEleicao);
+  rpc Coordenador (AnuncioCoordenador) returns (Recibo);
+  rpc ReportarMelhor (RelatorioIlha) returns (RespostaRelatorio);
+  rpc ObterEstado (PedidoEstado) returns (EstadoNo);
+}
+
+message Cabecalho {
+  int32 remetente = 1;
+  int64 relogio = 2;
+  string problema = 3;
+}
+
+message Rota {
+  repeated int32 cidades = 1;
+}
+
+message Recibo {
+  Cabecalho cabecalho = 1;
+  bool aceito = 2;
+  string motivo = 3;
+}
+
+message Ping {
+  Cabecalho cabecalho = 1;
+}
+
+message Pong {
+  Cabecalho cabecalho = 1;
+  int32 lider = 2;
+}
+
+message PacoteMigrantes {
+  Cabecalho cabecalho = 1;
+  int32 geracao = 2;
+  repeated Rota rotas = 3;
+}
+
+message PedidoEleicao {
+  Cabecalho cabecalho = 1;
+}
+
+message RespostaEleicao {
+  Cabecalho cabecalho = 1;
+}
+
+message AnuncioCoordenador {
+  Cabecalho cabecalho = 1;
+}
+
+message RelatorioIlha {
+  Cabecalho cabecalho = 1;
+  int32 geracao = 2;
+  double custo = 3;
+  Rota rota = 4;
+}
+
+message RespostaRelatorio {
+  Cabecalho cabecalho = 1;
+  bool encerrar = 2;
+}
+
+message PedidoEstado {
+}
+
+message EstadoNo {
+  int32 id = 1;
+  string problema = 2;
+  int64 relogio = 3;
+  int32 lider = 4;
+  bool emEleicao = 5;
+  bool isolado = 6;
+  int32 geracao = 7;
+  double melhorLocal = 8;
+  double melhorGlobal = 9;
+  int32 origemMelhorGlobal = 10;
+}

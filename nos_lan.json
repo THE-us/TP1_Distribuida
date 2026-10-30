@@ -1,0 +1,22 @@
+{
+  "problema": {
+    "cidades": 200,
+    "semente": 42
+  },
+  "algoritmo": {
+    "populacao": 150,
+    "taxaMutacao": 0.3,
+    "migrantes": 3,
+    "intervaloMigracao": 25,
+    "intervaloRelatorio": 25,
+    "geracoesMaximas": 100000,
+    "estagnacaoSegundos": 60
+  },
+  "nos": {
+    "1": "192.168.0.11:50051",
+    "2": "192.168.0.12:50051",
+    "3": "192.168.0.13:50051",
+    "4": "192.168.0.14:50051",
+    "5": "192.168.0.15:50051"
+  }
+}
