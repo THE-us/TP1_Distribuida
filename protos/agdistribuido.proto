@@ -1,7 +1,3 @@
-// name: THE-us
-// file: agdistribuido.proto
-// description: Contrato gRPC entre os nos do algoritmo genetico distribuido
-
 syntax = "proto3";
 
 package agdistribuido;
