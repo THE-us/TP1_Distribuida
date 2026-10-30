@@ -1,9 +1,3 @@
-"""
-name: THE-us
-file: visualizar.py
-description: Gera a imagem do resultado da execucao distribuida: mapa da melhor rota e evolucao do custo de cada ilha
-"""
-
 #[imports]
 import argparse
 import glob
