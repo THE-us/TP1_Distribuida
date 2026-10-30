@@ -1,9 +1,3 @@
-"""
-name: THE-us
-file: simulacao_local.py
-description: Compara ilhas isoladas com ilhas que trocam migrantes em anel, tudo em um unico processo
-"""
-
 #[imports]
 import argparse
 
