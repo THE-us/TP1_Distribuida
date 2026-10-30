@@ -1,9 +1,3 @@
-"""
-name: THE-us
-file: ag.py
-description: Algoritmo genetico para o caixeiro viajante (TSP) organizado em ilhas
-"""
-
 #[imports]
 import math
 import random
