@@ -1,9 +1,3 @@
-"""
-name: THE-us
-file: no.py
-description: No do algoritmo genetico distribuido: ilha + servidor gRPC + heartbeat + eleicao Bully + relogio de Lamport
-"""
-
 #[imports]
 import os
 os.environ.setdefault("GRPC_VERBOSITY", "ERROR")
