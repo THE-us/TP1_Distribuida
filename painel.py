@@ -1,9 +1,3 @@
-"""
-name: THE-us
-file: painel.py
-description: Painel interativo para iniciar, derrubar e acompanhar os nos do algoritmo genetico distribuido
-"""
-
 #[imports]
 import os
 os.environ.setdefault("GRPC_VERBOSITY", "ERROR")
